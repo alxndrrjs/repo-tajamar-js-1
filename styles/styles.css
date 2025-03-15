@@ -1,0 +1,75 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+body .console {
+  background-color: #252526;
+  width: 80%;
+  max-width: 800px;
+  height: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+body .console .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 10px;
+  color: #d4d4d4;
+}
+body .console .header .icons {
+  display: flex;
+  gap: 10px;
+}
+body .console .console-content {
+  height: 100%;
+  overflow-y: auto;
+}
+body .console .console-content .output {
+  white-space: pre;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+body .console .console-content #exercises {
+  padding: 10px;
+}
+body .error {
+  color: #f44747;
+}
+body .warning {
+  color: #ffcc00;
+}
+body .info {
+  color: #4fc3f7;
+}
+body .input-line {
+  display: flex;
+}
+body .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background-color: #d4d4d4;
+  margin-left: 4px;
+  animation: blink 0.8s infinite;
+}/*# sourceMappingURL=styles.css.map */
