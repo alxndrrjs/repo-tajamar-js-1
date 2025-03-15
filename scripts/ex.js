@@ -142,5 +142,167 @@ function mostrarDia(numero) {
 mostrarDia(2);  // Martes
 mostrarDia(7);  // Error: El número debe estar entre 0 y 6
 
+// 16. Bucle while
+let contador = 5;
+
+while (contador >= 1) {
+    console.log(contador);
+    contador--; // Disminuir el contador en 1 en cada iteración
+}
+
+// 17. Función con return
+function esPar(numero) {
+    return numero % 2 === 0;
+}
+
+console.log(esPar(4));  // true
+
+// 18. Template Strings
+let nombre = "Alexander";
+let edad = 21;
+
+let mensaje = `Hola, ${nombre}, tienes ${edad} años.`;
+
+console.log(mensaje);
+
+// 19. Arrow function
+const suma = (a, b) => a + b;
+
+console.log(suma(3, 5)); // 8
+
+// 20. forEach
+const numeros = [1, 2, 3];
+
+numeros.forEach(numero => console.log(numero));
+
+// 21. indexOf
+const frutas_ex21 = ["manzana", "banana", "pera"];
+
+const posicion = frutas_ex21.indexOf("banana");
+
+console.log("La posición de 'banana' es:", posicion);
+
+// 22. Ordenar números son sort
+const numeros_ex22 = [5, 1, 3];
+
+numeros_ex22.sort((a, b) => a - b);
+
+console.log(numeros_ex22);
+
+// 23. Filtrar con filter
+const valores = [1, 2, 3, 4];
+
+const numerosPares = valores.filter(valor => valor % 2 === 0);
+
+console.log(numerosPares); // [2, 4]
+
+// 24. Transformar con map
+const numeros_ex25 = [1, 2, 3];
+const cuadrados = numeros_ex25.map(num => num ** 2);
+console.log(cuadrados); // [1, 4, 9]
+
+
+// 25. Constructor de objetos
+function Persona(nombre) {
+    this.nombre = nombre;
+}
+  
+const persona1 = new Persona('Alexander');
+console.log(persona1.nombre); // "Alexander"  
+
+// 26. Métodos de fecha avanzados
+const fecha = new Date();
+const hora = fecha.getHours().toString().padStart(2, '0');
+const minutos = fecha.getMinutes().toString().padStart(2, '0');
+const segundos = fecha.getSeconds().toString().padStart(2, '0');
+
+console.log(`${hora}:${minutos}:${segundos}`);
+
+// 27. Redondeo con toFixed
+const numero = 3.1415;
+const redondeado = numero.toFixed(2);
+
+console.log(redondeado); // "3.14"
+
+// 28. Buscar substrings con includes
+const saludo = "¡Hola Mundo!";
+const contieneHola = saludo.toLowerCase().includes("hola");
+
+console.log(contieneHola); // true
+
+// 29. Convertir strings con split y join
+const frutas_ex29 = "manzana,banana,pera";
+const arrayFrutas = frutas_ex29.split(",");
+
+console.log(arrayFrutas); // ["manzana", "banana", "pera"]
+
+const nuevoString = arrayFrutas.join("-");
+
+console.log(nuevoString); // "manzana-banana-pera"
+
+// 30. Destructuring de arrays
+const array = [10, 20, 30];
+const [primerElemento, , tercerElemento] = array;
+
+console.log(primerElemento); // 10
+console.log(tercerElemento); // 30
+
+// 31. Destructuring de objetos
+const persona_ex31 = { nombre_ex31: "Ana", edad_ex31: 30 };
+const { nombre_ex31, edad_ex31 } = persona_ex31;
+
+console.log(nombre_ex31); // "Ana"
+console.log(edad_ex31); // 30
+
+// 32. Closure
+function crearContador() {
+    let contador_ex32 = 0;
+    return function() {
+        contador_ex32++;
+        return contador_ex32;
+    };
+}
+  
+const contador_ex32 = crearContador();
+console.log(contador_ex32()); // 1
+console.log(contador_ex32()); // 2
+console.log(contador_ex32()); // 3
+  
+// 33. this en métodos de objeto
+const coche = {
+    marca: "Toyota",
+    mostrarMarca: function() {
+        console.log(this.marca);
+    }
+};
+
+coche.mostrarMarca(); // "Toyota"
+  
+// 34. Clases
+class Rectangulo {
+    constructor(ancho, alto) {
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+
+    area() {
+        return this.ancho * this.alto;
+    }
+}
+  
+const rectangulo1 = new Rectangulo(5, 10);
+console.log(rectangulo1.area()); // 50
+  
+// 35. JSON
+const objeto = { nombre: "Ale", edad: 21 };
+const objetoJSON = JSON.stringify(objeto);
+
+console.log(objetoJSON); // '{"nombre":"Ale","edad":21}'
+
+const objetoParseado = JSON.parse(objetoJSON);
+console.log(objetoParseado); // { nombre: "Ale", edad: 21 }
+
+
+
 
 

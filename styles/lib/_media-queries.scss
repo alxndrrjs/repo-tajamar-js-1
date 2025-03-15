@@ -1,0 +1,24 @@
+@media (max-width: 768px) { /* Puedes ajustar el tamaño según lo necesites */
+
+    .output {
+        overflow-x: scroll; /* Habilitar el scroll horizontal */
+        -ms-overflow-style: none; /* Para navegadores de Microsoft */
+        scrollbar-width: none; /* Para Firefox */
+        touch-action: pan-x;
+    }
+
+    .output::-webkit-scrollbar {
+        display: none;
+    }
+
+    #exercises {
+        overflow-x: scroll; /* Habilitar el scroll horizontal */
+        -ms-overflow-style: none; /* Para navegadores de Microsoft */
+        scrollbar-width: none; /* Para Firefox */
+        touch-action: pan-x;
+    }
+
+    #exercises::-webkit-scrollbar {
+        display: none; /* Ocultar scrollbar en navegadores basados en Webkit (Chrome, Safari) */
+    }
+}

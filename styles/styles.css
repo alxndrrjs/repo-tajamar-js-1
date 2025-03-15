@@ -1,6 +1,27 @@
+@charset "UTF-8";
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+@media (max-width: 768px) { /* Puedes ajustar el tamaño según lo necesites */
+  .output {
+    overflow-x: scroll; /* Habilitar el scroll horizontal */
+    -ms-overflow-style: none; /* Para navegadores de Microsoft */
+    scrollbar-width: none; /* Para Firefox */
+    touch-action: pan-x;
+  }
+  .output::-webkit-scrollbar {
+    display: none;
+  }
+  #exercises {
+    overflow-x: scroll; /* Habilitar el scroll horizontal */
+    -ms-overflow-style: none; /* Para navegadores de Microsoft */
+    scrollbar-width: none; /* Para Firefox */
+    touch-action: pan-x;
+  }
+  #exercises::-webkit-scrollbar {
+    display: none; /* Ocultar scrollbar en navegadores basados en Webkit (Chrome, Safari) */
   }
 }
 body {
@@ -12,6 +33,24 @@ body {
   align-items: center;
   height: 100vh;
   overflow-y: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.light-mode {
+  background-color: #d4d4d4;
+  color: #1e1e1e;
+}
+body.light-mode .console {
+  background-color: #fff;
+}
+body.light-mode .console .header {
+  background-color: #cbcbcb;
+  color: #1e1e1e;
+}
+body.light-mode .console .header .icons a:hover {
+  background-color: #b6b6b6;
+}
+body.light-mode .console .console-content {
+  scrollbar-color: #b5b5b5 #fff;
 }
 body .console {
   background-color: #252526;
@@ -23,6 +62,7 @@ body .console {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 body .console .header {
   display: flex;
@@ -31,14 +71,27 @@ body .console .header {
   background-color: #333;
   padding: 5px 10px;
   color: #d4d4d4;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 body .console .header .icons {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+}
+body .console .header .icons a {
+  all: unset;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+body .console .header .icons a:hover {
+  background-color: #4a4a4a;
 }
 body .console .console-content {
   height: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-color: #585858 #252526;
+  transition: scrollbar-color 0.1s ease;
 }
 body .console .console-content .output {
   white-space: pre;

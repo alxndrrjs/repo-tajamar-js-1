@@ -145,54 +145,153 @@ mostrarDia(2);  // Martes
 mostrarDia(7);  // Error: El número debe estar entre 0 y 6` },
 
     { title: "Ejercicio 16", 
-        code: `` },
+        code: `let contador = 5;
+
+while (contador >= 1) {
+    console.log(contador);
+    contador--; // Disminuir el contador en 1 en cada iteración
+}
+` },
 
     { title: "Ejercicio 17", 
-        code: `` },
+        code: `function esPar(numero) {
+    return numero % 2 === 0;
+}
+
+console.log(esPar(4));  // true` },
 
     { title: "Ejercicio 18", 
-        code: `` },
+        code: "let nombre = 'Alexander';\nlet edad = 21;\nlet mensaje = ´Hola, ${nombre}, tienes ${edad} años.´;\nconsole.log(mensaje);" },
 
     { title: "Ejercicio 19", 
-        code: `` },
+        code: `const suma = (a, b) => a + b;
+
+console.log(suma(3, 5)); // 8` },
 
     { title: "Ejercicio 20", 
-        code: `` },
+        code: `const numeros = [1, 2, 3];
+
+numeros.forEach(numero => console.log(numero));` },
 
     { title: "Ejercicio 21", 
-        code: `` },
+        code: `const frutas_ex21 = ["manzana", "banana", "pera"];
+
+const posicion = frutas_ex21.indexOf("banana");
+
+console.log("La posición de 'banana' es:", posicion);` },
 
     { title: "Ejercicio 22", 
-        code: `` },
+        code: `const numeros_ex22 = [5, 1, 3];
+
+numeros_ex22.sort((a, b) => a - b);
+
+console.log(numeros_ex22);` },
 
     { title: "Ejercicio 23", 
-        code: `` },
+        code: `const valores = [1, 2, 3, 4];
+
+const numerosPares = valores.filter(valor => valor % 2 === 0);
+
+console.log(numerosPares); // [2, 4]` },
 
     { title: "Ejercicio 24", 
-        code: `` },
+        code: `const numeros_ex25 = [1, 2, 3];
+const cuadrados = numeros_ex25.map(num => num ** 2);
+console.log(cuadrados); // [1, 4, 9]` },
 
     { title: "Ejercicio 25", 
-        code: `` },
+        code: `function Persona(nombre) {
+    this.nombre = nombre;
+}
+  
+const persona1 = new Persona('Alexander');
+console.log(persona1.nombre); // "Alexander"` },
 
     { title: "Ejercicio 26", 
-        code: `` },
+        code: "const fecha = new Date();\nconst hora = fecha.getHours().toString().padStart(2, '0');\nconst minutos = fecha.getMinutes().toString().padStart(2, '0');\nconst segundos = fecha.getSeconds().toString().padStart(2, '0');\nconsole.log(`${hora}:${minutos}:${segundos}`);" },
 
     { title: "Ejercicio 27", 
-        code: `` },
+        code: `const numero = 3.1415;
+const redondeado = numero.toFixed(2);
+
+console.log(redondeado); // "3.14"` },
 
     { title: "Ejercicio 28", 
-        code: `` },
+        code: `const saludo = "¡Hola Mundo!";
+const contieneHola = saludo.toLowerCase().includes("hola");
+
+console.log(contieneHola); // true` },
 
     { title: "Ejercicio 29", 
-        code: `` },
+        code: `const frutas_ex29 = "manzana,banana,pera";
+const arrayFrutas = frutas_ex29.split(",");
+
+console.log(arrayFrutas); // ["manzana", "banana", "pera"]
+
+const nuevoString = arrayFrutas.join("-");
+
+console.log(nuevoString); // "manzana-banana-pera"` },
 
     { title: "Ejercicio 30", 
-        code: `` },
+        code: `const array = [10, 20, 30];
+const [primerElemento, , tercerElemento] = array;
+
+console.log(primerElemento); // 10
+console.log(tercerElemento); // 30` },
 
     { title: "Ejercicio 31", 
-        code: `` },
+        code: `const persona_ex31 = { nombre_ex31: "Ana", edad_ex31: 30 };
+const { nombre_ex31, edad_ex31 } = persona_ex31;
+
+console.log(nombre_ex31); // "Ana"
+console.log(edad_ex31); // 30` },
 
     { title: "Ejercicio 32", 
-        code: `` },
+        code: `function crearContador() {
+    let contador_ex32 = 0;
+    return function() {
+        contador_ex32++;
+        return contador_ex32;
+    };
+}
+  
+const contador_ex32 = crearContador();
+console.log(contador_ex32()); // 1
+console.log(contador_ex32()); // 2
+console.log(contador_ex32()); // 3` },
+
+    { title: "Ejercicio 33", 
+        code: `const coche = {
+    marca: "Toyota",
+    mostrarMarca: function() {
+        console.log(this.marca);
+    }
+};
+
+coche.mostrarMarca(); // "Toyota"` },
+
+    { title: "Ejercicio 34", 
+        code: `class Rectangulo {
+    constructor(ancho, alto) {
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+
+    area() {
+        return this.ancho * this.alto;
+    }
+}
+  
+const rectangulo1 = new Rectangulo(5, 10);
+console.log(rectangulo1.area()); // 50` },
+
+    { title: "Ejercicio 35", 
+        code: `const objeto = { nombre: "Ale", edad: 21 };
+const objetoJSON = JSON.stringify(objeto);
+
+console.log(objetoJSON); // '{"nombre":"Ale","edad":21}'
+
+const objetoParseado = JSON.parse(objetoJSON);
+console.log(objetoParseado); // { nombre: "Ale", edad: 21 }` },
 
 ];

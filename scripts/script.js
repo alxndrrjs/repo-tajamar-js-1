@@ -1,4 +1,34 @@
 import { exercises } from "./exercises.js";
+import { updateFavicon } from "./favicon.js";
+import { toggleTheme, errorCount, resetSettings, incrementErrorCount } from './easter-eggs.js';
+updateFavicon();
+
+document.getElementById('toggleTheme').addEventListener('click', toggleTheme);
+
+document.getElementById('showErrors').addEventListener('click', function() {
+    // Cuando el usuario haga clic en el filtro, generar un error ficticio
+    const errorLine = "Error en el código de la consola.";
+    let line = document.createElement("div");
+    line.classList.add("error", "generated-error");
+    line.textContent = errorLine;
+    outputElement.appendChild(line);
+    outputElement.scrollTop = outputElement.scrollHeight;
+    
+    // Incrementar el contador de errores
+    incrementErrorCount();
+
+    // Mostrar la cantidad de errores
+    alert(`Errores en la consola: ${errorCount}`);
+});
+
+document.getElementById('resetSettings').addEventListener('click', function() {
+    resetSettings(); // Llama a la función que restablece el tema y el contador de errores
+    // Elimina el contenido que tenga la clase generated-error
+    document.querySelectorAll("#output .generated-error").forEach(el => el.remove());
+});
+
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', updateFavicon);
 
 const outputElement = document.getElementById("output");
 const exercisesElement = document.getElementById("exercises");
