@@ -7,9 +7,9 @@ export function updateFavicon() {
 
     // Cambiar favicon según el tema actual
     if (isLightMode) {
-        favicon.href = '.././assets/icon/favicon-light.svg';  // Cambiar a favicon oscuro
+        favicon.href = 'assets/icon/favicon-light.svg';  // Cambiar a favicon oscuro
     } else {
-        favicon.href = '.././assets/icon/favicon-dark.svg';  // Cambiar a favicon claro
+        favicon.href = 'assets/icon/favicon-dark.svg';  // Cambiar a favicon claro
     }
 
     document.head.appendChild(favicon);
