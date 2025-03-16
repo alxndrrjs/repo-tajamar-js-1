@@ -1,27 +1,29 @@
-@charset "UTF-8";
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
-@media (max-width: 768px) { /* Puedes ajustar el tamaño según lo necesites */
+@media (max-width: 768px) {
+  .console-content {
+    touch-action: pan-x;
+  }
   .output {
-    overflow-x: scroll; /* Habilitar el scroll horizontal */
-    -ms-overflow-style: none; /* Para navegadores de Microsoft */
-    scrollbar-width: none; /* Para Firefox */
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     touch-action: pan-x;
   }
   .output::-webkit-scrollbar {
     display: none;
   }
   #exercises {
-    overflow-x: scroll; /* Habilitar el scroll horizontal */
-    -ms-overflow-style: none; /* Para navegadores de Microsoft */
-    scrollbar-width: none; /* Para Firefox */
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     touch-action: pan-x;
   }
   #exercises::-webkit-scrollbar {
-    display: none; /* Ocultar scrollbar en navegadores basados en Webkit (Chrome, Safari) */
+    display: none;
   }
 }
 body {

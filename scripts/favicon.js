@@ -14,15 +14,3 @@ export function updateFavicon() {
 
     document.head.appendChild(favicon);
 }
-
-// export function updateFavicon() {
-//     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-//     const favicon = document.querySelector('link[rel="icon"]');
-
-//     // Cambiar el favicon dependiendo del esquema de color
-//     if (darkModeMediaQuery.matches) {
-//         favicon.setAttribute("href", "../assets/icon/favicon-dark.svg");  // Favicon para modo oscuro
-//     } else {
-//         favicon.setAttribute("href", "../assets/icon/favicon-light.svg");  // Favicon para modo claro
-//     }
-// }
