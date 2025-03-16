@@ -5,7 +5,7 @@
 }
 @media (max-width: 768px) {
   .console-content {
-    touch-action: pan-x;
+    touch-action: pan-y;
   }
   .output {
     overflow-x: scroll;
